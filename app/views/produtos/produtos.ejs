@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Produtos</title>
+</head>
+<body>
+	<h1>Produtos</h1>
+	<div class="container">
+	<table class="tabela">
+		<tr>
+			<td>ID</td>
+			<td>Nome</td>
+			<td>Descrição</td>
+		</tr>
+		<% for(produto of produtos) { %>
+		<tr>
+			<td><%= produto.id_produto %></td>
+			<td><%= produto.nome %></td>
+			<td><%= produto.descricao %></td>
+		</tr>
+		<% } %>
+	</table>
+	</div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+</body>
+</html>

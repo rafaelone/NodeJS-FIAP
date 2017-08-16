@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clientes</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Fixed navbar -->
+ 
+<!-- FIM navbar -->
+	<div class="container-fluid">
+	<table class="table table-hover">
+		<tr>
+			<td>ID</td>
+			<td>Nome</td>
+			<td>Sobrenome</td>
+			<td>Cep</td>
+			<td>Endereco</td>
+			<td>CPF</td>
+		</tr>
+		<% for (cliente of clientes) {%>
+		<tr>
+			<td><%= cliente.id %></td>
+			<td><%= cliente.nome %></td>
+			<td><%= cliente.sobrenome %></td>
+			<td><%= cliente.cep %></td>
+			<td><%= cliente.endereco %></td>
+			<td><%= cliente.cpf %></td>
+		</tr>
+		<% } %>
+	</table>
+	</div>
+</body>
+</html>

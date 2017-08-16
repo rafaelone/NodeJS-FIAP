@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario de produtos</title>
+</head>
+<style>
+	.formulario{
+	padding: 20px;
+    border: 1px solid black;
+    width: 235px;
+    border-radius: 20px;
+	}
+
+	#lbNome{
+		margin-left: 85px;
+	}
+	#lbQtd{
+		margin-left: 85px;
+	}
+
+	#nome{
+		margin-left: 25px;
+	}
+
+	#qtd{
+		margin-left: 25px;
+	}
+	.cadastar{
+	margin-left: 59px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+	}
+
+	input[type="submit"]:hover{
+		color: red;
+	}
+
+	input[type="text"],[type="number"]{
+		border: 1px solid green;
+		border-radius: 20px
+		
+	}
+</style>
+<body>
+	<h1>Adicione um novo produto</h1>
+	<form class="formulario">
+		<div>
+			<label id="lbNome">Nome</label>
+			<input type="text" id="nome">
+		</div>
+		<div>
+			<label id="lbQtd">Quantidade</label>
+			<input type="number" id="qtd">
+		</div>
+		<div>
+			<input type="submit" class="cadastar" value="Cadastrar">
+		</div>
+	</form>
+</body>
+</html>
