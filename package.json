@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
+    "consign": "^0.1.6",
     "mysql": "^2.14.1"
   }
 }
