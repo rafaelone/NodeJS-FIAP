@@ -25,7 +25,6 @@ app.listen(PORT, () => {
 	
 });
 
-
 app.get('/lol', function(req, res){
 	
 	res.send("<html><body style='background: black'><p style='text-align: center; color: blue; font-size: 40px; '>League of legends</p></body></html>");
