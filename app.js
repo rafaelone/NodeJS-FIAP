@@ -1,17 +1,5 @@
 const { app, msg } = require('./config/server');
 
-var rotaHome = require('./app/routes/home');
-rotaHome(app);
-
-var rotaCadastrar = require('./app/routes/cadastrar');
-rotaCadastrar(app);
-
-var rotaProdutos = require("./app/routes/produtos");
-rotaProdutos(app);
-
-var rotaCliente = require("./app/routes/cliente");
-rotaCliente(app);
-
 const PORT = 3000;
 
 app.listen(PORT, () => {
