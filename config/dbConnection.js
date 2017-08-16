@@ -1,5 +1,7 @@
 var mysql = require("mysql");
-	module.exports = function(){
+var conecMySQL = function (){
+
+console.log('Conexão foi estabelecida');
 		var connection = mysql.createConnection({
 			host: 'localhost',
 			user: 'root',
@@ -7,4 +9,9 @@ var mysql = require("mysql");
 			database: 'sistema_produtos'
 		});
 		return connection;
+}
+
+	module.exports = function(){
+		console.log('o autoload carregou o modulo de conexao');
+		return conecMySQL;
 }
