@@ -4,6 +4,8 @@ module.exports = function(app){
 	});
 
 	app.post('/produtos/salvar', (req, res) => {
-		res.send('oola');
+		var produto = req.body;
+		res.send(produto);
+		//res.send('oola');
 	});
 }
