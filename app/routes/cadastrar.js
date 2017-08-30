@@ -5,7 +5,13 @@ module.exports = function(app){
 
 	app.post('/produtos/salvar', (req, res) => {
 		var produto = req.body;
-		res.send(produto);
-		//res.send('oola');
+	
+		var connection = app.config.dbConnection();
+		var produtosModel = app.app.models.produtosModel;
+		
+		produtosModel.salvarProdutos(produto, connection, (error, result)=>{
+			//res.render('produtos/produtos');
+			res.redirect('/produtos');
+			});
 	});
 }
