@@ -7,9 +7,9 @@ module.exports = function(app){
 		var produto = req.body;
 	
 		var connection = app.config.dbConnection();
-		var produtosModel = app.app.models.produtosModel;
+		var produtosModel =  new app.app.models.ProdutosDAO(connection);
 		
-		produtosModel.salvarProdutos(produto, connection, (error, result)=>{
+		produtosModel.salvarProdutos(produto,  (error, result)=>{
 			//res.render('produtos/produtos');
 			res.redirect('/produtos');
 			});
