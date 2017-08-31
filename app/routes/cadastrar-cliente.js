@@ -6,9 +6,9 @@ module.exports = function(app){
 	app.post('/cliente/cadastrar', (req, res) => {
 		var cliente = req.body;
 		var connection = app.config.dbConnection();
-		var clienteModel = app.app.models.clienteModel;
+		var clienteModel = new app.app.models.ClienteDAO(connection);
 
-		clienteModel.salvarClientes(cliente, connection, (error, result)=>{
+		clienteModel.salvarClientes(cliente, (error, result)=>{
 			res.redirect('/clientes');
 		});
 	});
