@@ -23,6 +23,7 @@
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "consign": "^0.1.6",
+    "express-validator": "^4.1.1",
     "mysql": "^2.14.1"
   }
 }
