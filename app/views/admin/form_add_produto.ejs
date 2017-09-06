@@ -46,14 +46,23 @@
 </style>
 <body>
 	<h1>Adicione um novo produto</h1>
+	
+	<% if(validacao) { %>
+			<ul>
+				<% for (var i = 0; i < validacao.length; i++) { %>
+					<li><%= validacao[i].msg  %></li>
+				<% } %>
+			</ul>
+		<% } %>
+	
 	<form class="formulario" action="/produtos/salvar" method="post">
 		<div>
 			<label id="nome">Nome</label>
-			<input type="text" id="nome" name="nome">
+			<input type="text" id="nome" name="nome" value="<%= produto.nome%>">
 		</div>
 		<div>
 			<label id="descricao">Descrição</label>
-			<input type="text" id="descricao" name="descricao">
+			<input type="text" id="descricao" name="descricao" value="<%= produto.descricao%>">
 		</div>
 		<div>
 			<input type="submit" class="cadastar" value="Cadastrar">
