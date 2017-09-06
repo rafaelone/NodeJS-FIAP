@@ -16,32 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `clientes`
+-- Table structure for table `produtos`
 --
 
-DROP TABLE IF EXISTS `clientes`;
+DROP TABLE IF EXISTS `produtos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `clientes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `produtos` (
+  `id_produtos` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) DEFAULT NULL,
-  `sobrenome` varchar(45) DEFAULT NULL,
-  `cep` int(11) DEFAULT NULL,
-  `endereco` varchar(45) DEFAULT NULL,
-  `cpf` varchar(11) DEFAULT NULL,
-  `data_nasc` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `descricao` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id_produtos`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `clientes`
+-- Dumping data for table `produtos`
 --
 
-LOCK TABLES `clientes` WRITE;
-/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'Gustavo','Torrente',12282110,'R. Professor','3156421146',NULL),(2,'Batuta','Costa',5417060,'R. Mais Legal','21224587472',NULL),(3,'Rafel','Finoto',5417054,'R. Pirituba','55214810601',NULL),(4,'Renato','Massa',5817056,'R. do Sucesso','71333870345',NULL),(5,'Rene','Farias',5820160,'R. do Amigo','71333870345',NULL),(6,'asdasdasd','asdasdsad',32132132,'651651','651651651',NULL);
-/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+LOCK TABLES `produtos` WRITE;
+/*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
+INSERT INTO `produtos` VALUES (1,'Alface','Alface lisa'),(2,'Tomate','Tomate Pomodoro'),(3,'Maça','Maça Monica'),(4,'Abacaxi','Natural');
+/*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 10:09:44
+-- Dump completed on 2017-09-06 10:09:43
