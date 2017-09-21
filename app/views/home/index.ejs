@@ -1,11 +1,109 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-</head>
-<body>
-	<h1>Bem vindo a pagina inical</h1>
-</body>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Sistema Produtos</title>
+
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="/images/favicon.ico" />
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<img src="/images/logo.png" />
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">HOME</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-8">
+	    			<div class="produto_wrapper">
+							<a href="produto.html" class="produto_nome"><%= produtos[0].nome %></a>
+		    			<br />
+		    			<p class="produto_descricao">
+							<%= produtos[0].descricao %>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+	    			<div class="produto_wrapper">
+		    			<a href="produto.html" class="produto_nome"><%= produtos[1].nome %></a>
+
+		    			<br />
+		    			<p class="produto_descricao">
+							<%= produtos[1].descricao %>
+		    			</p>
+		    		</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="row">
+	    		<div class="col-md-4">
+	    			<div class="produto_wrapper">
+							<a href="produto.html" class="produto_nome"><%= produtos[2].nome %>o</a>
+		    			<br />
+		    			<p class="produto_descricao">
+								<%= produtos[2].descricao %>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+	    			<div class="produto_wrapper">
+							<a href="produto.html" class="produto_nome"><%= produtos[3].nome %></a>
+		    			<br />
+		    			<p class="produto_descricao">
+								<%= produtos[3].descricao %>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+	    			<div class="produto_wrapper">
+							<a href="produto.html" class="produto_nome"><%= produtos[4].nome %></a>
+		    			<br />
+		    			<p class="produto_descricao">
+								<%= produtos[4].descricao %>
+		    			</p>
+		    		</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="row ver_mais">
+	    		<button type="button" class="btn btn-default"><a href="/produtos">Ver todos os produtos</a></button>
+	    	</div>
+
+	    </div>
+
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
 </html>

@@ -10,11 +10,15 @@ function ProdutosDAO( connection){
 
 	ProdutosDAO.prototype.getProduto = function ( params,  callback){
 		const id = params.id;
-		this._connection.query(`SELECT * FROM produtos WHERE id_produto = ${id}`, callback);
+		this._connection.query(`SELECT * FROM produtos WHERE id_produtos = ${id}`, callback);
 	}
 
 	ProdutosDAO.prototype.salvarProdutos =  function(produto,  callback){
 		this._connection.query("INSERT INTO produtos SET ? ", produto, callback);
+	}
+
+	ProdutosDAO.prototype.get5UltimosProdutos = function (callback){
+		this._connection.query("SELECT * FROM produtos LIMIT 5", callback);
 	}
 
 module.exports = function() {

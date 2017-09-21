@@ -2,7 +2,7 @@ module.exports.form_add_produto = function (app, req, res){
     res.render('admin/form_add_produto', {validacao: {}, produto:{} });
 }
 
-module.exports.addProduto = function (app, req, res){
+module.exports.add_produto = function (app, req, res){
     var produto = req.body;
 		
 		req.assert('nome', 'Nome é obrigatorio').notEmpty();
